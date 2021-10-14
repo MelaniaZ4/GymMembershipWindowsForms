@@ -43,6 +43,8 @@ namespace Assignment_2
 
         private void MembershipForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'membershipDataSet.Member' table. You can move, or remove it, as needed.
+            this.memberTableAdapter.Fill(this.membershipDataSet.Member);
 
         }
 
@@ -317,7 +319,7 @@ namespace Assignment_2
         {
             if (MessageBox.Show("Are you sure you want to exit the form?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes) // display dialog
             {
-                Application.Exit();  // exit form
+                this.Close();  // exit form
             }
         }   // end of method
 
@@ -437,10 +439,32 @@ namespace Assignment_2
                         + "\r\nOther Goals: " + otherGoals.Checked
                         + "\r\nAdditional Information: " + infoInput.Text
                         );
+
+                    int mobile = Int32.Parse(phoneNumber.Text);
+                    string dateInput = date.Text; 
+                    DateTime dateConverted = DateTime.Parse(dateInput);
+                     
+
+                    MembershipDataSet.MemberRow newRow = membershipDataSet.Member.NewMemberRow();
+
+                    newRow.FirstName = firstName.Text;
+                    newRow.LastName = lastName.Text;
+                    newRow.Address = address.Text;
+                    newRow.Mobile = mobile;
+                    newRow.MembershipExpiry = dateConverted;
+                    newRow.PaymentFrequency = paymentFrequency1.Text;
+                    newRow.MembershipType = membershipType.Text;
+                    newRow.Extras = "No Extras";
+
+                    membershipDataSet.Member.Rows.Add(newRow);
+
+                    memberTableAdapter.Update(membershipDataSet.Member);
+
+
                     data.Close();   // save and close text file
                     if (MessageBox.Show("Your membership form submission was successful. Welcome to City Gym!", "Congratulations!", MessageBoxButtons.OK) == DialogResult.OK) // display dialog
                     {
-                        Application.Exit(); // exit form
+                        this.Close(); // exit form
                     }
                 }
                
@@ -544,5 +568,13 @@ namespace Assignment_2
                 extrasVideos.Checked = false;   // set Videos to unchecked
             }
         }   // end of method
+
+        private void memberBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.memberBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.membershipDataSet);
+
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace Assignment_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MembershipForm());
+            Application.Run(new MainMenu());
         }
     }
 }
