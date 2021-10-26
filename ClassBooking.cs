@@ -20,7 +20,7 @@ namespace Assignment_2
         private void mainExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        }  // end of method
 
         private void memberBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -28,7 +28,7 @@ namespace Assignment_2
             this.memberBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.membershipDataSet);
 
-        }
+        }  // end of method
 
         private void ClassBooking_Load(object sender, EventArgs e)
         {
@@ -46,36 +46,17 @@ namespace Assignment_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //int selectedrowcount = this.fitnessclassdatagridview.selectedrows.count;
-
-            //// get the current student
-            //datarowview currentmemberrecord = memberbindingsource.current as datarowview;
-            //// get the id of the current student
-            //int currentmemberid = (int)currentmemberrecord[0];
-
-            //for (int i = 0; i < selectedrowcount; i++)
-            //{
-            //    // getting the data from the selected class
-            //    datarowview classdrv = fitnessclassdatagridview.selectedrows[i].databounditem as datarowview;
-            //    // getting the courseid
-            //    int classid = (int)classdrv[0];
-
-            //    // create row object 
-            //    membershipdataset.classbookingrow newclassbookingrow = membershipdataset.classbooking.newclassbookingrow();
-            //    // assign values for studentid and courseid
-            //    // the studentcourse primary key will autoincrement.
-            //    newclassbookingrow.memberid = currentmemberid;
-            //    newclassbookingrow.classid = classid;
-            //    // insert into dataset
-            //    membershipdataset.classbooking.rows.add(newclassbookingrow);
-            //} // end of our loop
-
-            //// commit to db using the table adapter manager
-            //this.validate();
-            //this.tableadaptermanager.updateall(membershipdataset);
-
-            ////refresh member classes  to update the datagridview for the user.
-            //this.memberclassestableadapter.fill(this.membershipdataset.memberclasses);
+            
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Show dialog box when user clicks 'Help'
+            if (MessageBox.Show("Call 0800 888 888 to talk to an Assistant.", "Help", MessageBoxButtons.OK) == DialogResult.OK)
+            {
+
+            }
+        }   // end of method
     }
-}
+    }
+

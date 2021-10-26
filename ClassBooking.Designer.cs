@@ -85,6 +85,16 @@ namespace Assignment_2
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
             memberIDLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
@@ -100,12 +110,14 @@ namespace Assignment_2
             ((System.ComponentModel.ISupportInitialize)(this.memberClassesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fitnessClassBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fitnessClassDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // memberIDLabel
             // 
             memberIDLabel.AutoSize = true;
-            memberIDLabel.Location = new System.Drawing.Point(51, 138);
+            memberIDLabel.Location = new System.Drawing.Point(49, 189);
             memberIDLabel.Name = "memberIDLabel";
             memberIDLabel.Size = new System.Drawing.Size(92, 20);
             memberIDLabel.TabIndex = 219;
@@ -114,7 +126,7 @@ namespace Assignment_2
             // firstNameLabel
             // 
             firstNameLabel.AutoSize = true;
-            firstNameLabel.Location = new System.Drawing.Point(51, 170);
+            firstNameLabel.Location = new System.Drawing.Point(49, 221);
             firstNameLabel.Name = "firstNameLabel";
             firstNameLabel.Size = new System.Drawing.Size(90, 20);
             firstNameLabel.TabIndex = 221;
@@ -123,7 +135,7 @@ namespace Assignment_2
             // lastNameLabel
             // 
             lastNameLabel.AutoSize = true;
-            lastNameLabel.Location = new System.Drawing.Point(51, 202);
+            lastNameLabel.Location = new System.Drawing.Point(49, 253);
             lastNameLabel.Name = "lastNameLabel";
             lastNameLabel.Size = new System.Drawing.Size(90, 20);
             lastNameLabel.TabIndex = 223;
@@ -132,7 +144,7 @@ namespace Assignment_2
             // addressLabel
             // 
             addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(51, 234);
+            addressLabel.Location = new System.Drawing.Point(49, 285);
             addressLabel.Name = "addressLabel";
             addressLabel.Size = new System.Drawing.Size(72, 20);
             addressLabel.TabIndex = 225;
@@ -141,7 +153,7 @@ namespace Assignment_2
             // mobileLabel
             // 
             mobileLabel.AutoSize = true;
-            mobileLabel.Location = new System.Drawing.Point(51, 266);
+            mobileLabel.Location = new System.Drawing.Point(49, 317);
             mobileLabel.Name = "mobileLabel";
             mobileLabel.Size = new System.Drawing.Size(59, 20);
             mobileLabel.TabIndex = 227;
@@ -163,7 +175,7 @@ namespace Assignment_2
             this.mainExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.mainExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainExitButton.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.mainExitButton.Location = new System.Drawing.Point(1085, 704);
+            this.mainExitButton.Location = new System.Drawing.Point(1254, 697);
             this.mainExitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainExitButton.Name = "mainExitButton";
             this.mainExitButton.Size = new System.Drawing.Size(166, 55);
@@ -175,11 +187,12 @@ namespace Assignment_2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(489, 50);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(584, 64);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 36);
+            this.label2.Size = new System.Drawing.Size(181, 32);
             this.label2.TabIndex = 216;
             this.label2.Text = "Book a Class";
             // 
@@ -188,7 +201,7 @@ namespace Assignment_2
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(354, 724);
+            this.button1.Location = new System.Drawing.Point(590, 341);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(166, 55);
@@ -202,7 +215,7 @@ namespace Assignment_2
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Location = new System.Drawing.Point(72, 724);
+            this.button2.Location = new System.Drawing.Point(590, 697);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(166, 55);
@@ -237,7 +250,7 @@ namespace Assignment_2
             this.memberBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.memberBindingNavigator.Name = "memberBindingNavigator";
             this.memberBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.memberBindingNavigator.Size = new System.Drawing.Size(1449, 38);
+            this.memberBindingNavigator.Size = new System.Drawing.Size(1449, 33);
             this.memberBindingNavigator.TabIndex = 219;
             this.memberBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -247,7 +260,7 @@ namespace Assignment_2
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // memberBindingSource
@@ -349,7 +362,7 @@ namespace Assignment_2
             // memberIDTextBox
             // 
             this.memberIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "MemberID", true));
-            this.memberIDTextBox.Location = new System.Drawing.Point(211, 135);
+            this.memberIDTextBox.Location = new System.Drawing.Point(209, 186);
             this.memberIDTextBox.Name = "memberIDTextBox";
             this.memberIDTextBox.Size = new System.Drawing.Size(200, 26);
             this.memberIDTextBox.TabIndex = 220;
@@ -357,7 +370,7 @@ namespace Assignment_2
             // firstNameTextBox
             // 
             this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "FirstName", true));
-            this.firstNameTextBox.Location = new System.Drawing.Point(211, 167);
+            this.firstNameTextBox.Location = new System.Drawing.Point(209, 218);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(200, 26);
             this.firstNameTextBox.TabIndex = 222;
@@ -365,7 +378,7 @@ namespace Assignment_2
             // lastNameTextBox
             // 
             this.lastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "LastName", true));
-            this.lastNameTextBox.Location = new System.Drawing.Point(211, 199);
+            this.lastNameTextBox.Location = new System.Drawing.Point(209, 250);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(200, 26);
             this.lastNameTextBox.TabIndex = 224;
@@ -373,7 +386,7 @@ namespace Assignment_2
             // addressTextBox
             // 
             this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "Address", true));
-            this.addressTextBox.Location = new System.Drawing.Point(211, 231);
+            this.addressTextBox.Location = new System.Drawing.Point(209, 282);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(200, 26);
             this.addressTextBox.TabIndex = 226;
@@ -381,7 +394,7 @@ namespace Assignment_2
             // mobileTextBox
             // 
             this.mobileTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.memberBindingSource, "Mobile", true));
-            this.mobileTextBox.Location = new System.Drawing.Point(211, 263);
+            this.mobileTextBox.Location = new System.Drawing.Point(209, 317);
             this.mobileTextBox.Name = "mobileTextBox";
             this.mobileTextBox.Size = new System.Drawing.Size(200, 26);
             this.mobileTextBox.TabIndex = 228;
@@ -428,7 +441,7 @@ namespace Assignment_2
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn11});
             this.memberClassesDataGridView.DataSource = this.memberClassesBindingSource;
-            this.memberClassesDataGridView.Location = new System.Drawing.Point(474, 102);
+            this.memberClassesDataGridView.Location = new System.Drawing.Point(590, 102);
             this.memberClassesDataGridView.Name = "memberClassesDataGridView";
             this.memberClassesDataGridView.RowHeadersWidth = 62;
             this.memberClassesDataGridView.RowTemplate.Height = 28;
@@ -493,11 +506,11 @@ namespace Assignment_2
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.fitnessClassDataGridView.DataSource = this.fitnessClassBindingSource;
-            this.fitnessClassDataGridView.Location = new System.Drawing.Point(33, 345);
+            this.fitnessClassDataGridView.Location = new System.Drawing.Point(24, 456);
             this.fitnessClassDataGridView.Name = "fitnessClassDataGridView";
             this.fitnessClassDataGridView.RowHeadersWidth = 62;
             this.fitnessClassDataGridView.RowTemplate.Height = 28;
-            this.fitnessClassDataGridView.Size = new System.Drawing.Size(646, 220);
+            this.fitnessClassDataGridView.Size = new System.Drawing.Size(516, 220);
             this.fitnessClassDataGridView.TabIndex = 228;
             // 
             // dataGridViewTextBoxColumn1
@@ -573,12 +586,125 @@ namespace Assignment_2
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.Width = 150;
             // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button3.Location = new System.Drawing.Point(33, 699);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(81, 49);
+            this.button3.TabIndex = 230;
+            this.button3.Text = "Help";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::Assignment_2.Properties.Resources.Help;
+            this.pictureBox9.Location = new System.Drawing.Point(114, 699);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(71, 63);
+            this.pictureBox9.TabIndex = 229;
+            this.pictureBox9.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(24, 415);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(340, 32);
+            this.label1.TabIndex = 231;
+            this.label1.Text = "Available Fitness Classes";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(584, 414);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(329, 32);
+            this.label3.TabIndex = 232;
+            this.label3.Text = "Member Class Timetable";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19});
+            this.dataGridView1.DataSource = this.memberClassesBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(590, 456);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(847, 220);
+            this.dataGridView1.TabIndex = 233;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Description";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "InstructorName";
+            this.dataGridViewTextBoxColumn16.HeaderText = "InstructorName";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "WeekDay";
+            this.dataGridViewTextBoxColumn18.HeaderText = "WeekDay";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "DateTime";
+            this.dataGridViewTextBoxColumn19.HeaderText = "DateTime";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Width = 150;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(47, 102);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(252, 37);
+            this.label4.TabIndex = 234;
+            this.label4.Text = "Class Bookings";
+            // 
             // ClassBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1449, 997);
+            this.ClientSize = new System.Drawing.Size(1449, 787);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.fitnessClassDataGridView);
             this.Controls.Add(this.memberClassesDataGridView);
             this.Controls.Add(memberIDLabel);
@@ -611,6 +737,8 @@ namespace Assignment_2
             ((System.ComponentModel.ISupportInitialize)(this.memberClassesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fitnessClassBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fitnessClassDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -667,5 +795,15 @@ namespace Assignment_2
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.Label label4;
     }
 }

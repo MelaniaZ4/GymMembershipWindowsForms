@@ -164,6 +164,7 @@ namespace Assignment_2
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -182,6 +183,7 @@ namespace Assignment_2
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingNavigator)).BeginInit();
             this.memberBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memberDataGridView)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -216,11 +218,10 @@ namespace Assignment_2
             this.panel1.Controls.Add(this.membershipType);
             this.panel1.Controls.Add(this.label29);
             this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.calculateButton);
-            this.panel1.Location = new System.Drawing.Point(1036, 243);
+            this.panel1.Location = new System.Drawing.Point(1026, 205);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(393, 615);
+            this.panel1.Size = new System.Drawing.Size(387, 537);
             this.panel1.TabIndex = 145;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -229,7 +230,7 @@ namespace Assignment_2
             this.paymentFrequencyTotal.AutoSize = true;
             this.paymentFrequencyTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentFrequencyTotal.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.paymentFrequencyTotal.Location = new System.Drawing.Point(311, 523);
+            this.paymentFrequencyTotal.Location = new System.Drawing.Point(311, 501);
             this.paymentFrequencyTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.paymentFrequencyTotal.Name = "paymentFrequencyTotal";
             this.paymentFrequencyTotal.Size = new System.Drawing.Size(56, 20);
@@ -241,7 +242,7 @@ namespace Assignment_2
             this.membershipFeeTotal.AutoSize = true;
             this.membershipFeeTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.membershipFeeTotal.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.membershipFeeTotal.Location = new System.Drawing.Point(250, 494);
+            this.membershipFeeTotal.Location = new System.Drawing.Point(250, 472);
             this.membershipFeeTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.membershipFeeTotal.Name = "membershipFeeTotal";
             this.membershipFeeTotal.Size = new System.Drawing.Size(81, 30);
@@ -253,7 +254,7 @@ namespace Assignment_2
             this.paymentFrequency1.AutoSize = true;
             this.paymentFrequency1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentFrequency1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.paymentFrequency1.Location = new System.Drawing.Point(311, 305);
+            this.paymentFrequency1.Location = new System.Drawing.Point(311, 301);
             this.paymentFrequency1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.paymentFrequency1.Name = "paymentFrequency1";
             this.paymentFrequency1.Size = new System.Drawing.Size(44, 15);
@@ -265,7 +266,7 @@ namespace Assignment_2
             this.totalDiscount.AutoSize = true;
             this.totalDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalDiscount.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.totalDiscount.Location = new System.Drawing.Point(269, 434);
+            this.totalDiscount.Location = new System.Drawing.Point(269, 430);
             this.totalDiscount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalDiscount.Name = "totalDiscount";
             this.totalDiscount.Size = new System.Drawing.Size(60, 20);
@@ -276,7 +277,7 @@ namespace Assignment_2
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(38, 432);
+            this.label20.Location = new System.Drawing.Point(38, 428);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(140, 22);
@@ -288,7 +289,7 @@ namespace Assignment_2
             this.paymentFrequency2.AutoSize = true;
             this.paymentFrequency2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentFrequency2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.paymentFrequency2.Location = new System.Drawing.Point(260, 505);
+            this.paymentFrequency2.Location = new System.Drawing.Point(260, 483);
             this.paymentFrequency2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.paymentFrequency2.Name = "paymentFrequency2";
             this.paymentFrequency2.Size = new System.Drawing.Size(44, 15);
@@ -300,7 +301,7 @@ namespace Assignment_2
             this.debitDiscount.AutoSize = true;
             this.debitDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.debitDiscount.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.debitDiscount.Location = new System.Drawing.Point(277, 394);
+            this.debitDiscount.Location = new System.Drawing.Point(277, 390);
             this.debitDiscount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.debitDiscount.Name = "debitDiscount";
             this.debitDiscount.Size = new System.Drawing.Size(54, 20);
@@ -312,7 +313,7 @@ namespace Assignment_2
             this.durationDiscount.AutoSize = true;
             this.durationDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.durationDiscount.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.durationDiscount.Location = new System.Drawing.Point(277, 370);
+            this.durationDiscount.Location = new System.Drawing.Point(277, 366);
             this.durationDiscount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.durationDiscount.Name = "durationDiscount";
             this.durationDiscount.Size = new System.Drawing.Size(54, 20);
@@ -324,7 +325,7 @@ namespace Assignment_2
             this.membershipFee.AutoSize = true;
             this.membershipFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.membershipFee.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.membershipFee.Location = new System.Drawing.Point(277, 286);
+            this.membershipFee.Location = new System.Drawing.Point(277, 282);
             this.membershipFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.membershipFee.Name = "membershipFee";
             this.membershipFee.Size = new System.Drawing.Size(54, 20);
@@ -336,7 +337,7 @@ namespace Assignment_2
             this.priceVideos.AutoSize = true;
             this.priceVideos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceVideos.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.priceVideos.Location = new System.Drawing.Point(282, 249);
+            this.priceVideos.Location = new System.Drawing.Point(282, 245);
             this.priceVideos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.priceVideos.Name = "priceVideos";
             this.priceVideos.Size = new System.Drawing.Size(49, 20);
@@ -348,7 +349,7 @@ namespace Assignment_2
             this.priceConsultation.AutoSize = true;
             this.priceConsultation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceConsultation.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.priceConsultation.Location = new System.Drawing.Point(282, 221);
+            this.priceConsultation.Location = new System.Drawing.Point(282, 217);
             this.priceConsultation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.priceConsultation.Name = "priceConsultation";
             this.priceConsultation.Size = new System.Drawing.Size(49, 20);
@@ -360,7 +361,7 @@ namespace Assignment_2
             this.priceTrainer.AutoSize = true;
             this.priceTrainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceTrainer.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.priceTrainer.Location = new System.Drawing.Point(282, 194);
+            this.priceTrainer.Location = new System.Drawing.Point(282, 190);
             this.priceTrainer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.priceTrainer.Name = "priceTrainer";
             this.priceTrainer.Size = new System.Drawing.Size(49, 20);
@@ -372,7 +373,7 @@ namespace Assignment_2
             this.priceAccess.AutoSize = true;
             this.priceAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceAccess.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.priceAccess.Location = new System.Drawing.Point(282, 165);
+            this.priceAccess.Location = new System.Drawing.Point(282, 161);
             this.priceAccess.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.priceAccess.Name = "priceAccess";
             this.priceAccess.Size = new System.Drawing.Size(49, 20);
@@ -384,7 +385,7 @@ namespace Assignment_2
             this.priceBasic.AutoSize = true;
             this.priceBasic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceBasic.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.priceBasic.Location = new System.Drawing.Point(282, 102);
+            this.priceBasic.Location = new System.Drawing.Point(282, 98);
             this.priceBasic.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.priceBasic.Name = "priceBasic";
             this.priceBasic.Size = new System.Drawing.Size(49, 20);
@@ -395,7 +396,7 @@ namespace Assignment_2
             // 
             this.directDebitLabel.AutoSize = true;
             this.directDebitLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.directDebitLabel.Location = new System.Drawing.Point(38, 392);
+            this.directDebitLabel.Location = new System.Drawing.Point(38, 388);
             this.directDebitLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.directDebitLabel.Name = "directDebitLabel";
             this.directDebitLabel.Size = new System.Drawing.Size(132, 20);
@@ -406,7 +407,7 @@ namespace Assignment_2
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(38, 338);
+            this.label40.Location = new System.Drawing.Point(38, 334);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(80, 20);
@@ -417,7 +418,7 @@ namespace Assignment_2
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(37, 247);
+            this.label39.Location = new System.Drawing.Point(37, 243);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(163, 20);
@@ -428,7 +429,7 @@ namespace Assignment_2
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(38, 220);
+            this.label38.Location = new System.Drawing.Point(38, 216);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(131, 20);
@@ -439,7 +440,7 @@ namespace Assignment_2
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(37, 191);
+            this.label37.Location = new System.Drawing.Point(37, 187);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(124, 20);
@@ -450,7 +451,7 @@ namespace Assignment_2
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(38, 164);
+            this.label36.Location = new System.Drawing.Point(38, 160);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(96, 20);
@@ -462,7 +463,7 @@ namespace Assignment_2
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label35.Location = new System.Drawing.Point(41, 493);
+            this.label35.Location = new System.Drawing.Point(41, 471);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(75, 30);
@@ -473,7 +474,7 @@ namespace Assignment_2
             // 
             this.durationDiscountLabel.AutoSize = true;
             this.durationDiscountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.durationDiscountLabel.Location = new System.Drawing.Point(38, 366);
+            this.durationDiscountLabel.Location = new System.Drawing.Point(38, 362);
             this.durationDiscountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.durationDiscountLabel.Name = "durationDiscountLabel";
             this.durationDiscountLabel.Size = new System.Drawing.Size(137, 20);
@@ -494,7 +495,7 @@ namespace Assignment_2
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(38, 136);
+            this.label32.Location = new System.Drawing.Point(38, 132);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(60, 20);
@@ -505,7 +506,7 @@ namespace Assignment_2
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(38, 288);
+            this.label31.Location = new System.Drawing.Point(38, 284);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(142, 20);
@@ -516,7 +517,7 @@ namespace Assignment_2
             // 
             this.membershipType.AutoSize = true;
             this.membershipType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.membershipType.Location = new System.Drawing.Point(38, 100);
+            this.membershipType.Location = new System.Drawing.Point(38, 96);
             this.membershipType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.membershipType.Name = "membershipType";
             this.membershipType.Size = new System.Drawing.Size(48, 20);
@@ -527,7 +528,7 @@ namespace Assignment_2
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(38, 73);
+            this.label29.Location = new System.Drawing.Point(38, 69);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(149, 20);
@@ -539,7 +540,7 @@ namespace Assignment_2
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label23.Location = new System.Drawing.Point(37, 18);
+            this.label23.Location = new System.Drawing.Point(37, 14);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(205, 29);
@@ -551,11 +552,11 @@ namespace Assignment_2
             this.calculateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateButton.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.calculateButton.Location = new System.Drawing.Point(142, 556);
+            this.calculateButton.Location = new System.Drawing.Point(843, 762);
             this.calculateButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(143, 37);
-            this.calculateButton.TabIndex = 17;
+            this.calculateButton.Size = new System.Drawing.Size(155, 49);
+            this.calculateButton.TabIndex = 21;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
@@ -564,7 +565,7 @@ namespace Assignment_2
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(727, 479);
+            this.label19.Location = new System.Drawing.Point(723, 446);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(70, 15);
@@ -588,12 +589,12 @@ namespace Assignment_2
             this.extrasDietConsultation.AutoSize = true;
             this.extrasDietConsultation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.extrasDietConsultation.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.extrasDietConsultation.Location = new System.Drawing.Point(858, 574);
+            this.extrasDietConsultation.Location = new System.Drawing.Point(854, 541);
             this.extrasDietConsultation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.extrasDietConsultation.Name = "extrasDietConsultation";
             this.extrasDietConsultation.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.extrasDietConsultation.Size = new System.Drawing.Size(22, 21);
-            this.extrasDietConsultation.TabIndex = 136;
+            this.extrasDietConsultation.TabIndex = 17;
             this.extrasDietConsultation.UseVisualStyleBackColor = true;
             // 
             // label14
@@ -601,7 +602,7 @@ namespace Assignment_2
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label14.Location = new System.Drawing.Point(513, 469);
+            this.label14.Location = new System.Drawing.Point(509, 436);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(73, 25);
@@ -612,11 +613,11 @@ namespace Assignment_2
             // 
             this.address.Cursor = System.Windows.Forms.Cursors.Hand;
             this.address.ForeColor = System.Drawing.Color.SteelBlue;
-            this.address.Location = new System.Drawing.Point(82, 196);
+            this.address.Location = new System.Drawing.Point(78, 187);
             this.address.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(363, 26);
-            this.address.TabIndex = 119;
+            this.address.TabIndex = 2;
             this.address.Text = " Address";
             this.address.Click += new System.EventHandler(this.address_Click);
             this.address.TextChanged += new System.EventHandler(this.address_TextChanged);
@@ -625,11 +626,11 @@ namespace Assignment_2
             // 
             this.emailAddress.Cursor = System.Windows.Forms.Cursors.Hand;
             this.emailAddress.ForeColor = System.Drawing.Color.SteelBlue;
-            this.emailAddress.Location = new System.Drawing.Point(82, 240);
+            this.emailAddress.Location = new System.Drawing.Point(78, 231);
             this.emailAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.emailAddress.Name = "emailAddress";
             this.emailAddress.Size = new System.Drawing.Size(363, 26);
-            this.emailAddress.TabIndex = 118;
+            this.emailAddress.TabIndex = 3;
             this.emailAddress.Text = " Email Address";
             this.emailAddress.Click += new System.EventHandler(this.emailAddress_Click);
             this.emailAddress.TextChanged += new System.EventHandler(this.emailAddress_TextChanged);
@@ -638,11 +639,11 @@ namespace Assignment_2
             // 
             this.phoneNumber.Cursor = System.Windows.Forms.Cursors.Hand;
             this.phoneNumber.ForeColor = System.Drawing.Color.SteelBlue;
-            this.phoneNumber.Location = new System.Drawing.Point(82, 289);
+            this.phoneNumber.Location = new System.Drawing.Point(78, 280);
             this.phoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.phoneNumber.Name = "phoneNumber";
             this.phoneNumber.Size = new System.Drawing.Size(363, 26);
-            this.phoneNumber.TabIndex = 117;
+            this.phoneNumber.TabIndex = 4;
             this.phoneNumber.Text = " Mobile Number";
             this.phoneNumber.Click += new System.EventHandler(this.phoneNumber_Click);
             this.phoneNumber.TextChanged += new System.EventHandler(this.phoneNumber_TextChanged);
@@ -651,11 +652,11 @@ namespace Assignment_2
             // 
             this.firstName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.firstName.ForeColor = System.Drawing.Color.SteelBlue;
-            this.firstName.Location = new System.Drawing.Point(82, 151);
+            this.firstName.Location = new System.Drawing.Point(78, 142);
             this.firstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(177, 26);
-            this.firstName.TabIndex = 116;
+            this.firstName.TabIndex = 0;
             this.firstName.Text = " First Name";
             this.firstName.Click += new System.EventHandler(this.firstName_Click);
             this.firstName.TextChanged += new System.EventHandler(this.firstName_TextChanged);
@@ -664,11 +665,11 @@ namespace Assignment_2
             // 
             this.lastName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lastName.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lastName.Location = new System.Drawing.Point(267, 151);
+            this.lastName.Location = new System.Drawing.Point(263, 142);
             this.lastName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(178, 26);
-            this.lastName.TabIndex = 115;
+            this.lastName.TabIndex = 1;
             this.lastName.Text = " Last Name";
             this.lastName.Click += new System.EventHandler(this.lastName_Click);
             this.lastName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -678,7 +679,7 @@ namespace Assignment_2
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(1070, 88);
+            this.label5.Location = new System.Drawing.Point(61, 14);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(177, 25);
@@ -690,7 +691,7 @@ namespace Assignment_2
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(77, 88);
+            this.label3.Location = new System.Drawing.Point(73, 79);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(225, 25);
@@ -704,9 +705,9 @@ namespace Assignment_2
             this.label2.Location = new System.Drawing.Point(43, 40);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(348, 36);
+            this.label2.Size = new System.Drawing.Size(254, 36);
             this.label2.TabIndex = 111;
-            this.label2.Text = "Online Membership Form";
+            this.label2.Text = "Membership Form";
             // 
             // label1
             // 
@@ -737,7 +738,7 @@ namespace Assignment_2
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(79, 113);
+            this.label6.Location = new System.Drawing.Point(75, 104);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(180, 15);
@@ -749,7 +750,7 @@ namespace Assignment_2
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label8.Location = new System.Drawing.Point(513, 399);
+            this.label8.Location = new System.Drawing.Point(509, 366);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 25);
@@ -760,11 +761,11 @@ namespace Assignment_2
             // 
             this.date.Cursor = System.Windows.Forms.Cursors.Hand;
             this.date.ForeColor = System.Drawing.Color.SteelBlue;
-            this.date.Location = new System.Drawing.Point(668, 400);
+            this.date.Location = new System.Drawing.Point(664, 367);
             this.date.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(178, 26);
-            this.date.TabIndex = 152;
+            this.date.TabIndex = 14;
             this.date.Text = " dd / mm / yyyy";
             this.date.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.date.Click += new System.EventHandler(this.date_Click);
@@ -775,7 +776,7 @@ namespace Assignment_2
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label9.Location = new System.Drawing.Point(77, 363);
+            this.label9.Location = new System.Drawing.Point(73, 354);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(159, 25);
@@ -786,12 +787,12 @@ namespace Assignment_2
             // 
             this.health.AutoSize = true;
             this.health.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.health.Location = new System.Drawing.Point(82, 407);
+            this.health.Location = new System.Drawing.Point(78, 398);
             this.health.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.health.Name = "health";
             this.health.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.health.Size = new System.Drawing.Size(82, 24);
-            this.health.TabIndex = 154;
+            this.health.TabIndex = 5;
             this.health.Text = "Health";
             this.health.UseVisualStyleBackColor = true;
             this.health.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
@@ -800,12 +801,12 @@ namespace Assignment_2
             // 
             this.endurance.AutoSize = true;
             this.endurance.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.endurance.Location = new System.Drawing.Point(82, 447);
+            this.endurance.Location = new System.Drawing.Point(78, 438);
             this.endurance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.endurance.Name = "endurance";
             this.endurance.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.endurance.Size = new System.Drawing.Size(113, 24);
-            this.endurance.TabIndex = 155;
+            this.endurance.TabIndex = 6;
             this.endurance.Text = "Endurance";
             this.endurance.UseVisualStyleBackColor = true;
             // 
@@ -813,12 +814,12 @@ namespace Assignment_2
             // 
             this.strength.AutoSize = true;
             this.strength.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.strength.Location = new System.Drawing.Point(82, 486);
+            this.strength.Location = new System.Drawing.Point(78, 477);
             this.strength.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.strength.Name = "strength";
             this.strength.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.strength.Size = new System.Drawing.Size(97, 24);
-            this.strength.TabIndex = 156;
+            this.strength.TabIndex = 7;
             this.strength.Text = "Strength";
             this.strength.UseVisualStyleBackColor = true;
             // 
@@ -826,12 +827,12 @@ namespace Assignment_2
             // 
             this.muscleMass.AutoSize = true;
             this.muscleMass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.muscleMass.Location = new System.Drawing.Point(82, 526);
+            this.muscleMass.Location = new System.Drawing.Point(78, 517);
             this.muscleMass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.muscleMass.Name = "muscleMass";
             this.muscleMass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.muscleMass.Size = new System.Drawing.Size(127, 24);
-            this.muscleMass.TabIndex = 157;
+            this.muscleMass.TabIndex = 8;
             this.muscleMass.Text = "Muscle Mass";
             this.muscleMass.UseVisualStyleBackColor = true;
             // 
@@ -839,12 +840,12 @@ namespace Assignment_2
             // 
             this.weightGoal.AutoSize = true;
             this.weightGoal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.weightGoal.Location = new System.Drawing.Point(82, 566);
+            this.weightGoal.Location = new System.Drawing.Point(78, 557);
             this.weightGoal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.weightGoal.Name = "weightGoal";
             this.weightGoal.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.weightGoal.Size = new System.Drawing.Size(117, 24);
-            this.weightGoal.TabIndex = 158;
+            this.weightGoal.TabIndex = 9;
             this.weightGoal.Text = "Weight loss";
             this.weightGoal.UseVisualStyleBackColor = true;
             // 
@@ -852,12 +853,12 @@ namespace Assignment_2
             // 
             this.otherGoals.AutoSize = true;
             this.otherGoals.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.otherGoals.Location = new System.Drawing.Point(82, 604);
+            this.otherGoals.Location = new System.Drawing.Point(78, 595);
             this.otherGoals.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.otherGoals.Name = "otherGoals";
             this.otherGoals.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.otherGoals.Size = new System.Drawing.Size(117, 24);
-            this.otherGoals.TabIndex = 159;
+            this.otherGoals.TabIndex = 10;
             this.otherGoals.Text = "Other goals";
             this.otherGoals.UseVisualStyleBackColor = true;
             // 
@@ -865,12 +866,12 @@ namespace Assignment_2
             // 
             this.infoInput.Cursor = System.Windows.Forms.Cursors.Hand;
             this.infoInput.ForeColor = System.Drawing.Color.SteelBlue;
-            this.infoInput.Location = new System.Drawing.Point(82, 643);
+            this.infoInput.Location = new System.Drawing.Point(78, 634);
             this.infoInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.infoInput.Multiline = true;
             this.infoInput.Name = "infoInput";
             this.infoInput.Size = new System.Drawing.Size(363, 98);
-            this.infoInput.TabIndex = 160;
+            this.infoInput.TabIndex = 11;
             this.infoInput.Text = "Additional information (e.g. other goals, injuries, health conditions...)";
             this.infoInput.Click += new System.EventHandler(this.infoInput_Click);
             // 
@@ -879,10 +880,10 @@ namespace Assignment_2
             this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.exitButton.Location = new System.Drawing.Point(348, 782);
+            this.exitButton.Location = new System.Drawing.Point(1290, 762);
             this.exitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(166, 55);
+            this.exitButton.Size = new System.Drawing.Size(158, 49);
             this.exitButton.TabIndex = 162;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -891,7 +892,7 @@ namespace Assignment_2
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(530, 575);
+            this.label24.Location = new System.Drawing.Point(526, 542);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(131, 20);
             this.label24.TabIndex = 173;
@@ -900,7 +901,7 @@ namespace Assignment_2
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(726, 575);
+            this.label25.Location = new System.Drawing.Point(722, 542);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(58, 20);
             this.label25.TabIndex = 174;
@@ -909,7 +910,7 @@ namespace Assignment_2
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(726, 606);
+            this.label26.Location = new System.Drawing.Point(722, 573);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(58, 20);
             this.label26.TabIndex = 177;
@@ -918,7 +919,7 @@ namespace Assignment_2
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(530, 606);
+            this.label27.Location = new System.Drawing.Point(526, 573);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(163, 20);
             this.label27.TabIndex = 176;
@@ -930,18 +931,18 @@ namespace Assignment_2
             this.extrasVideos.AutoSize = true;
             this.extrasVideos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.extrasVideos.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.extrasVideos.Location = new System.Drawing.Point(858, 605);
+            this.extrasVideos.Location = new System.Drawing.Point(854, 572);
             this.extrasVideos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.extrasVideos.Name = "extrasVideos";
             this.extrasVideos.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.extrasVideos.Size = new System.Drawing.Size(22, 21);
-            this.extrasVideos.TabIndex = 175;
+            this.extrasVideos.TabIndex = 18;
             this.extrasVideos.UseVisualStyleBackColor = true;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(726, 541);
+            this.label28.Location = new System.Drawing.Point(722, 508);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(58, 20);
             this.label28.TabIndex = 180;
@@ -950,7 +951,7 @@ namespace Assignment_2
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(530, 541);
+            this.label50.Location = new System.Drawing.Point(526, 508);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(120, 20);
             this.label50.TabIndex = 179;
@@ -961,18 +962,18 @@ namespace Assignment_2
             this.extrasTrainer.AutoSize = true;
             this.extrasTrainer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.extrasTrainer.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.extrasTrainer.Location = new System.Drawing.Point(858, 540);
+            this.extrasTrainer.Location = new System.Drawing.Point(854, 507);
             this.extrasTrainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.extrasTrainer.Name = "extrasTrainer";
             this.extrasTrainer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.extrasTrainer.Size = new System.Drawing.Size(22, 21);
-            this.extrasTrainer.TabIndex = 178;
+            this.extrasTrainer.TabIndex = 16;
             this.extrasTrainer.UseVisualStyleBackColor = true;
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(726, 510);
+            this.label51.Location = new System.Drawing.Point(722, 477);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(49, 20);
             this.label51.TabIndex = 183;
@@ -981,7 +982,7 @@ namespace Assignment_2
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(530, 510);
+            this.label52.Location = new System.Drawing.Point(526, 477);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(96, 20);
             this.label52.TabIndex = 182;
@@ -992,12 +993,12 @@ namespace Assignment_2
             this.extrasAccess.AutoSize = true;
             this.extrasAccess.Cursor = System.Windows.Forms.Cursors.Hand;
             this.extrasAccess.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
-            this.extrasAccess.Location = new System.Drawing.Point(858, 509);
+            this.extrasAccess.Location = new System.Drawing.Point(854, 476);
             this.extrasAccess.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.extrasAccess.Name = "extrasAccess";
             this.extrasAccess.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.extrasAccess.Size = new System.Drawing.Size(22, 21);
-            this.extrasAccess.TabIndex = 181;
+            this.extrasAccess.TabIndex = 15;
             this.extrasAccess.UseVisualStyleBackColor = true;
             this.extrasAccess.CheckedChanged += new System.EventHandler(this.extrasAccess_CheckedChanged);
             // 
@@ -1008,12 +1009,12 @@ namespace Assignment_2
             this.termsAndConditions.Cursor = System.Windows.Forms.Cursors.Hand;
             this.termsAndConditions.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
             this.termsAndConditions.ForeColor = System.Drawing.Color.Black;
-            this.termsAndConditions.Location = new System.Drawing.Point(745, 737);
+            this.termsAndConditions.Location = new System.Drawing.Point(741, 718);
             this.termsAndConditions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.termsAndConditions.Name = "termsAndConditions";
             this.termsAndConditions.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.termsAndConditions.Size = new System.Drawing.Size(249, 24);
-            this.termsAndConditions.TabIndex = 184;
+            this.termsAndConditions.TabIndex = 22;
             this.termsAndConditions.Text = "*Accept Terms and Conditions";
             this.termsAndConditions.UseVisualStyleBackColor = false;
             this.termsAndConditions.CheckedChanged += new System.EventHandler(this.termsAndConditions_CheckedChanged);
@@ -1021,7 +1022,7 @@ namespace Assignment_2
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Assignment_2.Properties.Resources.Help;
-            this.pictureBox9.Location = new System.Drawing.Point(130, 782);
+            this.pictureBox9.Location = new System.Drawing.Point(130, 762);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(71, 63);
             this.pictureBox9.TabIndex = 185;
@@ -1030,7 +1031,7 @@ namespace Assignment_2
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Assignment_2.Properties.Resources.PaymentOptions;
-            this.pictureBox7.Location = new System.Drawing.Point(1009, 81);
+            this.pictureBox7.Location = new System.Drawing.Point(0, 3);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(61, 60);
             this.pictureBox7.TabIndex = 168;
@@ -1039,7 +1040,7 @@ namespace Assignment_2
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Assignment_2.Properties.Resources.Extras;
-            this.pictureBox6.Location = new System.Drawing.Point(467, 455);
+            this.pictureBox6.Location = new System.Drawing.Point(463, 422);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(51, 57);
             this.pictureBox6.TabIndex = 167;
@@ -1048,7 +1049,7 @@ namespace Assignment_2
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Assignment_2.Properties.Resources.Start_date;
-            this.pictureBox5.Location = new System.Drawing.Point(459, 384);
+            this.pictureBox5.Location = new System.Drawing.Point(455, 351);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(55, 57);
             this.pictureBox5.TabIndex = 166;
@@ -1057,7 +1058,7 @@ namespace Assignment_2
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Assignment_2.Properties.Resources.PersonalGoals;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 350);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 341);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(56, 58);
             this.pictureBox2.TabIndex = 163;
@@ -1066,7 +1067,7 @@ namespace Assignment_2
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Assignment_2.Properties.Resources.ContactDetails;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 79);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(56, 55);
             this.pictureBox1.TabIndex = 148;
@@ -1077,7 +1078,7 @@ namespace Assignment_2
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button3.Location = new System.Drawing.Point(49, 782);
+            this.button3.Location = new System.Drawing.Point(49, 762);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(81, 49);
@@ -1126,10 +1127,10 @@ namespace Assignment_2
             this.MembershipSettingsPanel.Controls.Add(this.label22);
             this.MembershipSettingsPanel.Controls.Add(this.label42);
             this.MembershipSettingsPanel.Controls.Add(this.label43);
-            this.MembershipSettingsPanel.Location = new System.Drawing.Point(450, 71);
+            this.MembershipSettingsPanel.Location = new System.Drawing.Point(446, 38);
             this.MembershipSettingsPanel.Name = "MembershipSettingsPanel";
             this.MembershipSettingsPanel.Size = new System.Drawing.Size(553, 223);
-            this.MembershipSettingsPanel.TabIndex = 194;
+            this.MembershipSettingsPanel.TabIndex = 12;
             // 
             // premium
             // 
@@ -1152,7 +1153,7 @@ namespace Assignment_2
             this.basic.Name = "basic";
             this.basic.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.basic.Size = new System.Drawing.Size(114, 24);
-            this.basic.TabIndex = 203;
+            this.basic.TabIndex = 12;
             this.basic.TabStop = true;
             this.basic.Text = "Basic ($10)";
             this.basic.UseVisualStyleBackColor = true;
@@ -1265,10 +1266,10 @@ namespace Assignment_2
             this.MembershipDurationPanel.Controls.Add(this.label55);
             this.MembershipDurationPanel.Controls.Add(this.label54);
             this.MembershipDurationPanel.Controls.Add(this.label53);
-            this.MembershipDurationPanel.Location = new System.Drawing.Point(465, 301);
+            this.MembershipDurationPanel.Location = new System.Drawing.Point(461, 268);
             this.MembershipDurationPanel.Name = "MembershipDurationPanel";
             this.MembershipDurationPanel.Size = new System.Drawing.Size(537, 77);
-            this.MembershipDurationPanel.TabIndex = 195;
+            this.MembershipDurationPanel.TabIndex = 13;
             // 
             // pictureBox3
             // 
@@ -1311,7 +1312,7 @@ namespace Assignment_2
             this.threeMonths.Name = "threeMonths";
             this.threeMonths.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.threeMonths.Size = new System.Drawing.Size(87, 24);
-            this.threeMonths.TabIndex = 206;
+            this.threeMonths.TabIndex = 13;
             this.threeMonths.TabStop = true;
             this.threeMonths.Text = "months";
             this.threeMonths.UseVisualStyleBackColor = true;
@@ -1331,7 +1332,7 @@ namespace Assignment_2
             // directDebit
             // 
             this.directDebit.AutoSize = true;
-            this.directDebit.Location = new System.Drawing.Point(1259, 133);
+            this.directDebit.Location = new System.Drawing.Point(250, 59);
             this.directDebit.Name = "directDebit";
             this.directDebit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.directDebit.Size = new System.Drawing.Size(118, 24);
@@ -1343,11 +1344,11 @@ namespace Assignment_2
             // 
             this.creditCard.AutoSize = true;
             this.creditCard.Checked = true;
-            this.creditCard.Location = new System.Drawing.Point(1080, 133);
+            this.creditCard.Location = new System.Drawing.Point(71, 59);
             this.creditCard.Name = "creditCard";
             this.creditCard.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.creditCard.Size = new System.Drawing.Size(114, 24);
-            this.creditCard.TabIndex = 204;
+            this.creditCard.TabIndex = 19;
             this.creditCard.TabStop = true;
             this.creditCard.Text = "Credit Card";
             this.creditCard.UseVisualStyleBackColor = true;
@@ -1360,7 +1361,7 @@ namespace Assignment_2
             this.weeklyPayment.Name = "weeklyPayment";
             this.weeklyPayment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.weeklyPayment.Size = new System.Drawing.Size(85, 24);
-            this.weeklyPayment.TabIndex = 207;
+            this.weeklyPayment.TabIndex = 21;
             this.weeklyPayment.TabStop = true;
             this.weeklyPayment.Text = "Weekly";
             this.weeklyPayment.UseVisualStyleBackColor = true;
@@ -1372,7 +1373,7 @@ namespace Assignment_2
             this.monthlyPayment.Name = "monthlyPayment";
             this.monthlyPayment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.monthlyPayment.Size = new System.Drawing.Size(89, 24);
-            this.monthlyPayment.TabIndex = 206;
+            this.monthlyPayment.TabIndex = 22;
             this.monthlyPayment.TabStop = true;
             this.monthlyPayment.Text = "Monthly";
             this.monthlyPayment.UseVisualStyleBackColor = true;
@@ -1382,10 +1383,10 @@ namespace Assignment_2
             this.PaymentFrequencyPanel.Controls.Add(this.weeklyPayment);
             this.PaymentFrequencyPanel.Controls.Add(this.monthlyPayment);
             this.PaymentFrequencyPanel.Controls.Add(this.label16);
-            this.PaymentFrequencyPanel.Location = new System.Drawing.Point(1026, 173);
+            this.PaymentFrequencyPanel.Location = new System.Drawing.Point(1022, 135);
             this.PaymentFrequencyPanel.Name = "PaymentFrequencyPanel";
             this.PaymentFrequencyPanel.Size = new System.Drawing.Size(413, 70);
-            this.PaymentFrequencyPanel.TabIndex = 208;
+            this.PaymentFrequencyPanel.TabIndex = 20;
             // 
             // notifyIcon1
             // 
@@ -1403,10 +1404,10 @@ namespace Assignment_2
             this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearButton.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.clearButton.Location = new System.Drawing.Point(588, 782);
+            this.clearButton.Location = new System.Drawing.Point(490, 762);
             this.clearButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(166, 55);
+            this.clearButton.Size = new System.Drawing.Size(147, 49);
             this.clearButton.TabIndex = 209;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
@@ -1417,11 +1418,11 @@ namespace Assignment_2
             this.submitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.submitButton.Location = new System.Drawing.Point(828, 782);
+            this.submitButton.Location = new System.Drawing.Point(667, 762);
             this.submitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(166, 55);
-            this.submitButton.TabIndex = 210;
+            this.submitButton.Size = new System.Drawing.Size(148, 49);
+            this.submitButton.TabIndex = 23;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
@@ -1431,7 +1432,7 @@ namespace Assignment_2
             this.Warning.AutoSize = true;
             this.Warning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Warning.ForeColor = System.Drawing.Color.Firebrick;
-            this.Warning.Location = new System.Drawing.Point(489, 679);
+            this.Warning.Location = new System.Drawing.Point(485, 655);
             this.Warning.Name = "Warning";
             this.Warning.Size = new System.Drawing.Size(0, 29);
             this.Warning.TabIndex = 211;
@@ -1502,7 +1503,7 @@ namespace Assignment_2
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 33);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -1512,7 +1513,7 @@ namespace Assignment_2
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -1521,7 +1522,7 @@ namespace Assignment_2
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -1530,13 +1531,13 @@ namespace Assignment_2
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -1551,7 +1552,7 @@ namespace Assignment_2
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -1559,7 +1560,7 @@ namespace Assignment_2
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -1568,20 +1569,20 @@ namespace Assignment_2
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
             // 
             // memberBindingNavigatorSaveItem
             // 
             this.memberBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.memberBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("memberBindingNavigatorSaveItem.Image")));
             this.memberBindingNavigatorSaveItem.Name = "memberBindingNavigatorSaveItem";
-            this.memberBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
+            this.memberBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
             this.memberBindingNavigatorSaveItem.Text = "Save Data";
             this.memberBindingNavigatorSaveItem.Click += new System.EventHandler(this.memberBindingNavigatorSaveItem_Click);
             // 
@@ -1599,11 +1600,11 @@ namespace Assignment_2
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.memberDataGridView.DataSource = this.memberBindingSource;
-            this.memberDataGridView.Location = new System.Drawing.Point(0, 876);
+            this.memberDataGridView.Location = new System.Drawing.Point(11, 831);
             this.memberDataGridView.Name = "memberDataGridView";
             this.memberDataGridView.RowHeadersWidth = 62;
             this.memberDataGridView.RowTemplate.Height = 28;
-            this.memberDataGridView.Size = new System.Drawing.Size(1457, 220);
+            this.memberDataGridView.Size = new System.Drawing.Size(1437, 135);
             this.memberDataGridView.TabIndex = 212;
             // 
             // dataGridViewTextBoxColumn2
@@ -1670,20 +1671,30 @@ namespace Assignment_2
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.Width = 150;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.pictureBox7);
+            this.panel2.Controls.Add(this.creditCard);
+            this.panel2.Controls.Add(this.directDebit);
+            this.panel2.Location = new System.Drawing.Point(1005, 44);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(391, 85);
+            this.panel2.TabIndex = 19;
+            // 
             // MembershipForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1481, 1266);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.memberDataGridView);
             this.Controls.Add(this.memberBindingNavigator);
             this.Controls.Add(this.Warning);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.PaymentFrequencyPanel);
-            this.Controls.Add(this.directDebit);
-            this.Controls.Add(this.creditCard);
             this.Controls.Add(this.MembershipDurationPanel);
             this.Controls.Add(this.MembershipSettingsPanel);
             this.Controls.Add(this.button3);
@@ -1700,10 +1711,10 @@ namespace Assignment_2
             this.Controls.Add(this.extrasVideos);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.infoInput);
             this.Controls.Add(this.otherGoals);
@@ -1726,11 +1737,11 @@ namespace Assignment_2
             this.Controls.Add(this.phoneNumber);
             this.Controls.Add(this.firstName);
             this.Controls.Add(this.lastName);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "MembershipForm";
+            this.Text = "Sign-up New Member";
             this.Load += new System.EventHandler(this.MembershipForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1755,6 +1766,8 @@ namespace Assignment_2
             this.memberBindingNavigator.ResumeLayout(false);
             this.memberBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memberDataGridView)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1895,6 +1908,7 @@ namespace Assignment_2
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

@@ -294,7 +294,7 @@ namespace Assignment_2
                 // check if monthly or weekly paymentfrequency is marked. 
                 if (monthlyPayment.Checked == true) //if monthly is marked, calculate monthly fee and display it
                 {
-                    paymentFrequency1.Text = "monthly";     // display payment frequency
+                    
                     paymentFrequencyTotal.Text = "monthly"; // display payment frequency
                     double membershipTotalMonthly = (membershipFeeTotalNum * 52.1429 / 12) - debitDiscountNum;  // calculate monthly membership fee
                     membershipFeeTotal.Text = "$" + membershipTotalMonthly.ToString("0.00");    // display monthly membership fee
@@ -382,7 +382,6 @@ namespace Assignment_2
                 debitDiscount.Text = "-$0.00";
                 totalDiscount.Text = "-$0.00";
                 durationDiscount.Text = "-$0.00";
-                paymentFrequency1.Text = "weekly";
                 paymentFrequencyTotal.Text = "weekly";
                 durationDiscountLabel.Text = "Duration Discount";
             }   // end of method
@@ -390,6 +389,7 @@ namespace Assignment_2
 
         private void button3_Click(object sender, EventArgs e) // ask for help button
         {
+            //Show dialog box when user clicks 'Help'
             if (MessageBox.Show("Call 0800 888 888 to talk to an Assistant.", "Help", MessageBoxButtons.OK) == DialogResult.OK)
             {
 
@@ -400,136 +400,242 @@ namespace Assignment_2
         {
 
             // check all conditions are met to submit membership form
-            if (membershipFeeTotal.Text != "$0.00" && termsAndConditions.Checked == true && firstName.Text != " First Name" && lastName.Text != " Last Name" && address.Text != " Address" && emailAddress.Text != " Email Address" && phoneNumber.Text != " Mobile Number" && date.Text != " dd / mm / yyyy" && date.Text != "" && phoneNumber.Text != "" && emailAddress.Text != "" && firstName.Text != "" && lastName.Text != "" && address.Text != "")
-            {
-                Warning.Text = "";  // re-set warning text to null
-                if (MessageBox.Show("Do you want to submit your membership form?", "Submit", MessageBoxButtons.OKCancel) == DialogResult.OK)    // display dialog
+                if (membershipFeeTotal.Text != "$0.00" && termsAndConditions.Checked == true && firstName.Text != " First Name" && lastName.Text != " Last Name" && address.Text != " Address" && emailAddress.Text != " Email Address" && phoneNumber.Text != " Mobile Number" && date.Text != " dd / mm / yyyy" && date.Text != "" && phoneNumber.Text != "" && emailAddress.Text != "" && firstName.Text != "" && lastName.Text != "" && address.Text != "")
                 {
-                    TextWriter data = new StreamWriter("C:\\Temp\\membershipData.txt"); // create new text file
-                    data.Write(  // write form data to text file
-                        "Name: " + firstName.Text + " " + lastName.Text
-                        + "\r\nAddress: " + address.Text
-                        + "\r\nEmail Address: " + emailAddress.Text
-                        + "\r\nPhone Number: " + phoneNumber.Text
-                        + "\r\nStart Date: " + date.Text
-                        + "\r\n"
-                        + "\r\nExtras"
-                         + "\r\n24-hour Access: " + extrasAccess.Checked
-                        + "\r\nPersonal Trainer: " + extrasTrainer.Checked
-                        + "\r\nDiet Consultation: " + extrasDietConsultation.Checked
-                        + "\r\nOnline Fitness Videos: " + extrasVideos.Checked
-                        + "\r\n"
-                        + "\r\nMembership Setting: " + membershipType.Text
-                        + "\r\n" + membershipType.Text + " Price: " + priceBasic.Text
-                        + "\r\nMembership Fee: " + membershipFee.Text
-                        + "\r\nMembership Duration: " + durationDiscountLabel.Text
-                        + "\r\nDuration Discount: " + durationDiscount.Text
-                        + "\r\nDirect Debit: " + directDebit.Checked
-                        + "\r\nDirect Debit Discount: " + debitDiscount.Text
-                        + "\r\nTotal Discount: " + totalDiscount.Text
-                        + "\r\nPayment Frequency: " + paymentFrequency1.Text
-                        + "\r\nTotal Membership Fee: " + membershipFeeTotal.Text
-                        + "\r\n"
-                        + "\r\nPersonal Goals: "
-                        + "\r\nHealth: " + health.Checked
-                        + "\r\nEndrurance: " + endurance.Checked
-                        + "\r\nStrength: " + strength.Checked
-                        + "\r\nMuscle mass: " + muscleMass.Checked
-                        + "\r\nWeight Goals: " + weightGoal.Checked
-                        + "\r\nOther Goals: " + otherGoals.Checked
-                        + "\r\nAdditional Information: " + infoInput.Text
-                        );
+                    Warning.Text = "";  // re-set warning text to null
+                    if (MessageBox.Show("Do you want to submit your membership form?", "Submit", MessageBoxButtons.OKCancel) == DialogResult.OK)    // display dialog
+                    {
 
-                    int mobile = Int32.Parse(phoneNumber.Text);
-                    string dateInput = date.Text; 
-                    DateTime dateConverted = DateTime.Parse(dateInput);
-                     
+                        //convert string to integer
+                        int mobile;
+                        if (Int32.TryParse(phoneNumber.Text, out mobile))
+                        {
+                            //continue
+                        }
+                        else
+                        {
+                            if (MessageBox.Show("Invalid phone number. Please type in numbers only", "Invalid Number", MessageBoxButtons.OKCancel) == DialogResult.OK) // display dialog
+                            {
+                                phoneNumber.ForeColor = Color.Firebrick;
+                            return;
+                            }
+                        }
 
+                        //convert string to date
+                        string dateInput = date.Text;
+                        DateTime dateConverted;
+                        
+
+                        if (DateTime.TryParse(dateInput, out dateConverted))
+                        {
+                        
+                             
+                        }
+                        else
+                        {
+                            if (MessageBox.Show("Invalid date. Please type in a date in a valid format", "Invalid Date", MessageBoxButtons.OKCancel) == DialogResult.OK) // display dialog
+                            {
+                                date.ForeColor = Color.Firebrick;
+                            return;
+                            }
+                        }
+
+                    DateTime expiryDate = dateConverted;
+
+                    if (threeMonths.Checked == true)
+                    {
+                        expiryDate = dateConverted.AddMonths(3);
+                    }
+                    else if (oneYear.Checked == true)
+                    {
+                        expiryDate = dateConverted.AddYears(1);
+                    }
+
+                    else if (twoYears.Checked == true)
+                    {
+                        expiryDate = dateConverted.AddYears(2);
+                    }
+
+
+                    //create new row in member dataset
                     MembershipDataSet.MemberRow newRow = membershipDataSet.Member.NewMemberRow();
 
-                    newRow.FirstName = firstName.Text;
-                    newRow.LastName = lastName.Text;
-                    newRow.Address = address.Text;
-                    newRow.Mobile = mobile;
-                    newRow.MembershipExpiry = dateConverted;
-                    newRow.PaymentFrequency = paymentFrequency1.Text;
-                    newRow.MembershipType = membershipType.Text;
-                    newRow.Extras = "No Extras";
+                        //insert information from form text boxes into dataview
+                        newRow.FirstName = firstName.Text;
+                        newRow.LastName = lastName.Text;
+                        newRow.Address = address.Text;
+                        newRow.Mobile = mobile;
+                        newRow.MembershipExpiry = expiryDate;
+                        newRow.PaymentFrequency = paymentFrequencyTotal.Text;
+                        newRow.MembershipType = membershipType.Text;
 
-                    membershipDataSet.Member.Rows.Add(newRow);
+                        // check for all possible 'Extras' combinations and add text accordningly
+                        if (extrasAccess.Checked == true && extrasTrainer.Checked == false && extrasDietConsultation.Checked == false && extrasVideos.Checked == false)
+                        { newRow.Extras = "24/7 Access"; }
+                        else if (extrasAccess.Checked == false && extrasTrainer.Checked == true && extrasDietConsultation.Checked == false && extrasVideos.Checked == false)
+                    { newRow.Extras = "Trainer"; }
+                        else if (extrasAccess.Checked == false && extrasTrainer.Checked == false && extrasDietConsultation.Checked == false && extrasVideos.Checked == true)
+                        { newRow.Extras = "Videos"; }
+                        else if (extrasAccess.Checked == false && extrasTrainer.Checked == false && extrasDietConsultation.Checked == true && extrasVideos.Checked == false)
+                        { newRow.Extras = "Consultation"; }
+                        else if (extrasAccess.Checked == true && extrasTrainer.Checked == true && extrasDietConsultation.Checked == false && extrasVideos.Checked == false)
+                        { newRow.Extras = "24/7 Access, Trainer"; }
+                        else if (extrasAccess.Checked == true && extrasTrainer.Checked == false && extrasDietConsultation.Checked == false && extrasVideos.Checked == true)
+                    { newRow.Extras = "24/7 Access, Videos"; }
+                        else if (extrasAccess.Checked == true && extrasTrainer.Checked == false && extrasDietConsultation.Checked == true && extrasVideos.Checked == false)
+                    { newRow.Extras = "24/7 Access, Consultation"; }
+                        else if (extrasAccess.Checked == true && extrasTrainer.Checked == true && extrasDietConsultation.Checked == false && extrasVideos.Checked == true)
+                    { newRow.Extras = "24/7 Access, Trainer, Videos"; }
+                        else if (extrasAccess.Checked == true && extrasTrainer.Checked == true && extrasDietConsultation.Checked == true && extrasVideos.Checked == false)
+                    { newRow.Extras = "24/7 Access, Trainer, Consultation"; }
+                        else if (extrasAccess.Checked == true && extrasTrainer.Checked == false && extrasDietConsultation.Checked == true && extrasVideos.Checked == true)
+                    { newRow.Extras = "24/7 Access, Consultation, Videos"; }
+                        else if (extrasAccess.Checked == false && extrasTrainer.Checked == true && extrasDietConsultation.Checked == true && extrasVideos.Checked == false)
+                    { newRow.Extras = "Trainer, Consultation"; }
+                        else if (extrasAccess.Checked == false && extrasTrainer.Checked == true && extrasDietConsultation.Checked == true && extrasVideos.Checked == true)
+                    { newRow.Extras = "Trainer, Consultation, Videos"; }
+                        else if (extrasAccess.Checked == false && extrasTrainer.Checked == true && extrasDietConsultation.Checked == false && extrasVideos.Checked == true)
+                    { newRow.Extras = "Trainer, Videos"; }
+                        else if (extrasAccess.Checked == false && extrasTrainer.Checked == false && extrasDietConsultation.Checked == true && extrasVideos.Checked == true)
+                    { newRow.Extras = "Consultation, Videos"; }
+                        else if (extrasAccess.Checked == true && extrasVideos.Checked == true && extrasDietConsultation.Checked == true && extrasTrainer.Checked == true)
+                        { newRow.Extras = "24/7 Access, Trainer, Consultation, Videos"; }
+                        else
+                        { newRow.Extras = "No Extras"; }
+                        // end of if-else statement
 
-                    memberTableAdapter.Update(membershipDataSet.Member);
+                        membershipDataSet.Member.Rows.Add(newRow);
+                        this.Validate();
+                        memberTableAdapter.Update(membershipDataSet.Member);
+
+                        //refresh the view
+                        this.memberTableAdapter.Fill(this.membershipDataSet.Member);
+
+                        if (MessageBox.Show("Your membership form submission was successful. Welcome to City Gym!", "Congratulations!", MessageBoxButtons.OK) == DialogResult.OK) // display dialog
+                        {
+                            //show dialog to confirm successful sign up 
+                        }
+                    // re-set all radio buttons and tickboxes
+                    extrasAccess.Checked = false;
+                    extrasTrainer.Checked = false;
+                    extrasDietConsultation.Checked = false;
+                    extrasVideos.Checked = false;
+                    basic.Checked = true;
+                    regular.Checked = false;
+                    premium.Checked = false;
+                    termsAndConditions.Checked = false;
+                    monthlyPayment.Checked = false;
+                    weeklyPayment.Checked = true;
+                    creditCard.Checked = true;
+                    directDebit.Checked = false;
+                    twoYears.Checked = false;
+                    oneYear.Checked = false;
+                    threeMonths.Checked = true;
+                    otherGoals.Checked = false;
+                    weightGoal.Checked = false;
+                    muscleMass.Checked = false;
+                    strength.Checked = false;
+                    endurance.Checked = false;
+                    health.Checked = false;
+
+                    // add placeholder to textboxes
+                    date.Text = " dd / mm / yyyy";
+                    infoInput.Text = "Additional information (e.g. injuries, health conditions...)";
+                    firstName.Text = " First Name";
+                    lastName.Text = " Last Name";
+                    emailAddress.Text = " Email Address";
+                    address.Text = " Address";
+                    phoneNumber.Text = " Mobile Number";
+                    Warning.Text = "";
+
+                    // re-set colour of textbox placehodlers to blue
+                    date.ForeColor = Color.SteelBlue;
+                    firstName.ForeColor = Color.SteelBlue;
+                    lastName.ForeColor = Color.SteelBlue;
+                    emailAddress.ForeColor = Color.SteelBlue;
+                    address.ForeColor = Color.SteelBlue;
+                    phoneNumber.ForeColor = Color.SteelBlue;
+                    calculateButton.ForeColor = Color.SteelBlue;
+                    termsAndConditions.ForeColor = Color.Black;
+
+                    // re-set all prices and labels
+                    priceBasic.Text = "$0.00";
+                    priceAccess.Text = "$0.00";
+                    priceConsultation.Text = "$0.00";
+                    priceTrainer.Text = "$0.00";
+                    priceVideos.Text = "$0.00";
+                    membershipFee.Text = "$0.00";
+                    membershipFeeTotal.Text = "$0.00";
+                    directDebitLabel.Text = "Credit Card";
+                    debitDiscount.Text = "-$0.00";
+                    totalDiscount.Text = "-$0.00";
+                    durationDiscount.Text = "-$0.00";
+                    paymentFrequencyTotal.Text = "weekly";
+                    durationDiscountLabel.Text = "Duration Discount";
+                }
 
 
-                    data.Close();   // save and close text file
-                    if (MessageBox.Show("Your membership form submission was successful. Welcome to City Gym!", "Congratulations!", MessageBoxButtons.OK) == DialogResult.OK) // display dialog
+                }
+                else    // check for all conditions 
+                        // if conditions are not met, display warning text and highlight not filled-in required text-boxes
+                {
+                    Warning.Text = ""; // re-set warning text to null
+                    if (firstName.Text == " First Name" | firstName.Text == "")  // if placeholder shows or text box is empty 
                     {
-                        this.Close(); // exit form
+                        firstName.Text = " First Name"; // re-set placeholder
+                        firstName.ForeColor = Color.Firebrick;
+                        Warning.Text = "Please fill in and check all required boxes*";
                     }
-                }
-               
-                   
-            }
-            else    // check for all conditions 
-                   // if conditions are not met, display warning text and highlight not filled-in required text-boxes
-            {
-                Warning.Text = ""; // re-set warning text to null
-                if (firstName.Text == " First Name" | firstName.Text == "")  // if placeholder shows or text box is empty 
-                {
-                    firstName.Text = " First Name"; // re-set placeholder
-                    firstName.ForeColor = Color.Firebrick;
-                    Warning.Text = "Please fill in and check all required boxes*";
-                }
 
 
-                if (lastName.Text == " Last Name" | lastName.Text == "") // if placeholder shows or text box is empty 
-                {
-                    lastName.Text = " Last Name";   // re-set placeholder
-                    lastName.ForeColor = Color.Firebrick;   // highlight testbox
-                    Warning.Text = "Please fill in and check all required boxes*";  // show error message
-                }
+                    if (lastName.Text == " Last Name" | lastName.Text == "") // if placeholder shows or text box is empty 
+                    {
+                        lastName.Text = " Last Name";   // re-set placeholder
+                        lastName.ForeColor = Color.Firebrick;   // highlight testbox
+                        Warning.Text = "Please fill in and check all required boxes*";  // show error message
+                    }
 
 
-                if (address.Text == " Address" | address.Text == "") // if placeholder shows or text box is empty 
-                {
-                    address.Text = " Address";  // re-set placeholder
-                    address.ForeColor = Color.Firebrick;    // highlight testbox
-                    Warning.Text = "Please fill in and check all required boxes*";  // show error message
-                }
+                    if (address.Text == " Address" | address.Text == "") // if placeholder shows or text box is empty 
+                    {
+                        address.Text = " Address";  // re-set placeholder
+                        address.ForeColor = Color.Firebrick;    // highlight testbox
+                        Warning.Text = "Please fill in and check all required boxes*";  // show error message
+                    }
 
-                if (emailAddress.Text == " Email Address" | emailAddress.Text == "")    // if placeholder shows or text box is empty 
-                {
-                    emailAddress.Text = " Email Address";   // re-set placeholder
-                    emailAddress.ForeColor = Color.Firebrick;   // highlight testbox
-                    Warning.Text = "Please fill in and check all required boxes*";  // show error message
-                }
+                    if (emailAddress.Text == " Email Address" | emailAddress.Text == "")    // if placeholder shows or text box is empty 
+                    {
+                        emailAddress.Text = " Email Address";   // re-set placeholder
+                        emailAddress.ForeColor = Color.Firebrick;   // highlight testbox
+                        Warning.Text = "Please fill in and check all required boxes*";  // show error message
+                    }
 
-                if (phoneNumber.Text == " Mobile Number" | phoneNumber.Text == "")  // if placeholder shows or text box is empty 
-                {
-                    phoneNumber.Text = " Mobile Number";    // re-set placeholder
-                    phoneNumber.ForeColor = Color.Firebrick;    // highlight testbox
-                    Warning.Text = "Please fill in and check all required boxes*";  // show error message
-                }
+                    if (phoneNumber.Text == " Mobile Number" | phoneNumber.Text == "")  // if placeholder shows or text box is empty 
+                    {
+                        phoneNumber.Text = " Mobile Number";    // re-set placeholder
+                        phoneNumber.ForeColor = Color.Firebrick;    // highlight testbox
+                        Warning.Text = "Please fill in and check all required boxes*";  // show error message
+                    }
 
-                if (date.Text == " dd / mm / yyyy" | date.Text == "")   // if placeholder shows or text box is empty 
-                {
-                    date.Text = " dd / mm / yyyy";  // re-set placeholder
-                    date.ForeColor = Color.Firebrick;   // highlight testbox
-                    Warning.Text = "Please fill in and check all required boxes*";  // show error message
-                }
+                    if (date.Text == " dd / mm / yyyy" | date.Text == "")   // if placeholder shows or text box is empty 
+                    {
+                        date.Text = " dd / mm / yyyy";  // re-set placeholder
+                        date.ForeColor = Color.Firebrick;   // highlight testbox
+                        Warning.Text = "Please fill in and check all required boxes*";  // show error message
+                    }
 
-                if (termsAndConditions.Checked == false)    // if terms and conditions tickbox is not checked
-                {
-                    termsAndConditions.ForeColor = Color.Firebrick; // highlight testbox
-                    Warning.Text = "Please fill in and check all required boxes*";  // show error message
-                }
+                    if (termsAndConditions.Checked == false)    // if terms and conditions tickbox is not checked
+                    {
+                        termsAndConditions.ForeColor = Color.Firebrick; // highlight testbox
+                        Warning.Text = "Please fill in and check all required boxes*";  // show error message
+                    }
 
-                if (membershipFeeTotal.Text == "$0.00") // if user has not calculated their latest membership fee
-                {
-                    calculateButton.ForeColor = Color.Firebrick;    // highlight testbox
-                    Warning.Text = "Please fill in and check all required boxes*";  // show error message
-                }
-            }   // end of if-else statement
+                    if (membershipFeeTotal.Text == "$0.00") // if user has not calculated their latest membership fee
+                    {
+                        calculateButton.ForeColor = Color.Firebrick;    // highlight testbox
+                        Warning.Text = "Please fill in and check all required boxes*";  // show error message
+                    }
+                }   // end of if-else statement
 
         } // end of method
 
@@ -575,6 +681,6 @@ namespace Assignment_2
             this.memberBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.membershipDataSet);
 
-        }
+        } 
     }
 }

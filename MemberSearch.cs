@@ -20,7 +20,7 @@ namespace Assignment_2
         private void mainExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        }  // end of method
 
         private void memberBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -28,17 +28,19 @@ namespace Assignment_2
             this.memberBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.membershipDataSet);
 
-        }
+        }  // end of method
 
         private void MemberSearch_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'membershipDataSet.Member' table. You can move, or remove it, as needed.
             this.memberTableAdapter.Fill(this.membershipDataSet.Member);
 
-        }
+        }  // end of method
 
         public void SearchMemberButton_Click(object sender, EventArgs e)
         {
+            //Filter datagrid view for specific members
+
             //Creating a dataview 
             DataView memberDataView = new DataView(membershipDataSet.Member);
 
@@ -55,18 +57,22 @@ namespace Assignment_2
 
             //Use DataView as the DataSource for the GridView
             memberDataGridView.DataSource = memberDataView;
-        }
+        }  // end of method
 
         private void ClearGridButton_Click(object sender, EventArgs e)
         {
             //Set the DataSource for the GridView to the full Student dataset.
             memberDataGridView.DataSource = membershipDataSet.Member;
-        }
+            SearchInput.Text = "";
+            basicFilter.Checked = false;
+            regularFilter.Checked = false;
+            premiumFilter.Checked = false;
+        }  // end of method
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (basicFilter.Checked == true)
+            if (basicFilter.Checked == true) //user filters for 'Basic'
             {
                 //Creating a dataview 
                 DataView membershipDataView = new DataView(membershipDataSet.Member);
@@ -83,7 +89,7 @@ namespace Assignment_2
             }
             else
             {
-                if (regularFilter.Checked == true)
+                if (regularFilter.Checked == true) //user filters for 'Regular'
                 {
                     //Creating a dataview 
                     DataView membershipDataView = new DataView(membershipDataSet.Member);
@@ -99,7 +105,7 @@ namespace Assignment_2
                 }
                 else
                 {
-                    if (premiumFilter.Checked == true)
+                    if (premiumFilter.Checked == true) //user filters for 'Premium'
                     {
                         //Creating a dataview 
                         DataView membershipDataView = new DataView(membershipDataSet.Member);
@@ -114,8 +120,18 @@ namespace Assignment_2
                         memberDataGridView.DataSource = membershipDataView;
                     }
                 }
-             
+
+            }  // end of if-else statement
+        }  // end of method
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //Show dialog box when user clicks 'Help'
+            if (MessageBox.Show("Call 0800 888 888 to talk to an Assistant.", "Help", MessageBoxButtons.OK) == DialogResult.OK)
+            {
+
             }
-        }
+        }   // end of method
     }
-}
+    }
+
